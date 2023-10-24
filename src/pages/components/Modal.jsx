@@ -44,10 +44,7 @@ export default function Modal({ isOpen, title, body, onCancel, onDelete }) {
        </Button>
       </>
      )}
-     {!onDelete ||
-      (typeof onDelete == "undefined" && (
-       <Button onClick={handleClose}>Okay</Button>
-      ))}
+     {!onDelete && <Button onClick={handleClose}>Okay</Button>}
     </DialogActions>
    </Dialog>
   </div>
