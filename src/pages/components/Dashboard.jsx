@@ -591,9 +591,10 @@ export default function Dashboard() {
           ) : (
            Array.from(allPosts)
             .sort(
-             (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
+             (a, b) => (a, b) =>
+              new Date(b.date || b.start).getTime() -
+              new Date(a.date || a.start).getTime()
             )
-            .slice(0, 10)
             .map((p, i) => {
              return (
               <Card sx={{ marginTop: 2, padding: 2 }} elevation={0}>
