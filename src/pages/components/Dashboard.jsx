@@ -542,7 +542,7 @@ export default function Dashboard() {
                  padding: "0.66rem 0",
                 }}
                >
-                {p.body.substring(0, 200)} . . .
+                {p.body.substring(0, 200).replaceAll("\\n", " ")}
                </p>
                <p
                 style={{
@@ -606,7 +606,7 @@ export default function Dashboard() {
                  padding: "0.66rem 0",
                 }}
                >
-                {p.body.substring(0, 200)} . . .
+                {p.body.substring(0, 200).replaceAll("\\n", " ")}
                </p>
                {p.type == "post" && (
                 <p
@@ -686,20 +686,3 @@ export default function Dashboard() {
   </>
  );
 }
-
-/*setDailyVisitors(
-        d.reduce((total, post) => {
-         if (post.views) {
-          return total + post.views;
-         }
-         return total;
-        }, 0) / d.length
-       );
-       setVisitors(
-        d.reduce((total, post) => {
-         if (post.views) {
-          return total + post.views;
-         }
-         return total;
-        }, 0)
-       );*/
