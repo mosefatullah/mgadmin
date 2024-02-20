@@ -6,7 +6,7 @@ function App() {
  return (
   <>
    <div className="Admin">
-    <BrowserRouter basename="/mgadmin/">
+    <BrowserRouter basename="/">
      <Routes>
       <Route path="/" element={<Home />}></Route>
       <Route path="/posts" element={<Posts />}></Route>
